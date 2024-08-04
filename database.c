@@ -3,7 +3,7 @@
 
 #define MAX_EMPLOYEES 1000
 
-struct employees_t { 
+__attribute__((__packed__)) struct employees_t { 
     int id;
     bool isManager; 
     char firstName[64];
@@ -21,4 +21,5 @@ void initialize_employees(struct employees_t employees[]) {
 int main() {
     struct employees_t employees[MAX_EMPLOYEES];
     initialize_employees(employees);
+    
 }
